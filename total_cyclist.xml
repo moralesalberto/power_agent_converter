@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<template version="1.0">
+<name>total_cyclist</name>
+<description>total cyclist	</description>
+<type>0</type>
+<segment>
+<control type="target">
+<param name="target" value="120"/>
+</control>
+<duration type="time">
+<param name="seconds" value="600"/>
+</duration>
+</segment>
+<segment>
+<control type="target">
+<param name="target" value="130"/>
+</control>
+<duration type="time">
+<param name="seconds" value="120"/>
+</duration>
+</segment>
+</template>
