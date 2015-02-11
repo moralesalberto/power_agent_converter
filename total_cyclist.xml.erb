@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<template version="1.0">
+  <name><%= filename.gsub('.xlsx','') %></name>
+  <description></description>
+  <type>0</type>
+
+  <% rows.each do |row| %>
+    <segment>
+      <control type="target">
+        <param name="target" value="<%= row.target_power %>"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="<%= row.duration %>"/>
+      </duration>
+    </segment>
+  <% end %>
+</template>
