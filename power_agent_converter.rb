@@ -41,10 +41,18 @@ class PowerAgentConverter
       @row = row
     end
 
+    # watts
+    # 256
+    # 120
     def target_power
       @row[2]
     end
 
+    # minutes and seconds
+    # 10:03
+    #  3:01
+    #  5:00
+    #  0:15
     def duration_units
       @row[1].to_s
     end
@@ -57,6 +65,7 @@ class PowerAgentConverter
       duration_units.match(/\:(\d+)/)[1].to_i
     end
 
+    # we want seconds for the xml file to import
     def duration
       (minutes*60)+seconds
     end
