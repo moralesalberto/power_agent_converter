@@ -12,6 +12,10 @@ class PowerAgentConverter
     @filename = filename
   end
 
+  def basename
+    filename.gsub('.csv','')
+  end
+
   def csv_rows
     @workbook ||= CSV.parse(File.read(filename))
   end
@@ -26,6 +30,10 @@ class PowerAgentConverter
 
   def output
     ERB.new(erb_template).result(binding)
+  end
+
+  def to_file
+    File.open("#{basename}.xml", "w") { |file| file.puts output }
   end
 
   class Row

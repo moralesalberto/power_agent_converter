@@ -32,4 +32,8 @@ describe PowerAgentConverter do
       expect(row.duration).to eq(181)
     end
   end
+
+  it 'writes the xml file' do
+    expect(converter.to_file).to be_nil
+  end
 end
