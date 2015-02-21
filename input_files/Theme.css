@@ -1,0 +1,273 @@
+A:visited {text-decoration: underline; color: blue}
+A:link    {text-decoration: underline; color: blue}
+A:hover   {text-decoration: underline; color: red}
+
+A.stat:visited {text-decoration: none; color: black}
+A.stat:link    {text-decoration: none; color: black}
+A.stat:hover   {text-decoration: underline; color: red}
+
+A.header:visited {text-decoration: none; color: #3A3C7B}
+A.header:link    {text-decoration: none; color: #3A3C7B}
+A.header:hover   {text-decoration: underline; color: red}
+
+body 
+{
+	font-family: Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+	font-size:12px;	
+	padding: 0px;
+    margin: 0px;    
+}
+
+.tableCenter
+{
+	width:650px;	
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+A.btn:visited {color: black}
+A.btn:link    {color: black}
+A.btn:hover   {color: blue;}
+.btn 
+{
+    font-family: Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+	font-size:10px;	
+    width:73px;
+}
+
+A.btnSmall:visited {color: black}
+A.btnSmall:link    {color: black}
+A.btnSmall:hover   {color: blue;}
+.btnSmall 
+{
+    font-family: Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+	font-size:8px;	
+    width:60px;
+}
+
+.calBody 
+{
+	margin-left:0px; 
+	margin-right:1px; 
+	margin-top:0px; 
+	margin-bottom:0px;
+}
+
+.a td 
+{ 
+	background: #f0f0f0; 	
+}      
+
+.b td 
+{ 
+	background: #ffffff; 
+}
+
+.error 
+{ 
+	color: red; 
+}
+
+.GraphStatBody 
+{
+	font-family: Arial, Helvetica, sans-serif, "Microsoft YaHei";  
+	font-size:12px;	
+	background-color:#f0f0f0;
+	padding-left:3px;
+}
+
+table 
+{
+	font-family: Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+	font-size:12px;
+	text-align:left;
+}
+
+.tableSmall
+{
+	font-family: Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+	font-size:10px;
+}
+
+.tableGraphStat
+{
+	font-family: Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+	font-size:10px;
+	width: 98%;
+}
+.header 
+{	
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+	font-size: 18px; 
+	font-weight: bold; 	
+	color:#3A3C7B; 
+}
+
+.headerCAPS
+{
+	font-family: "Segoe UI", Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+	font-size: 15px; 
+	font-weight: bold; 	
+	color:#3A3C7B; 
+    text-transform:uppercase;
+}
+
+
+
+.headerSmall
+{
+	font-family: "Segoe UI", Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+	font-size: 12px; 
+	font-weight: bold; 	
+	color:#3A3C7B; 
+}
+.StatTitle  
+{
+	color:#000000; 
+	font-weight:bold;	
+}
+.TileStat 
+{
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+    text-align:center;
+    width:125px; 
+    height:110px;    
+    color:white;
+}
+.RowTitle 
+{
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+	color:#3A3C7B; 
+	font-weight:bold; 
+	font-size:16px
+}      
+.RowTitle2
+{
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+	background-color:#f0f0f0; 
+	color:#000000; 
+	font-weight:bold;
+	vertical-align: bottom;
+}
+.RowSubTitle 
+{
+    font-family: Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+	color:black; 
+	font-weight:bold; 
+	font-size:11px
+}
+.RowTitleS 
+{
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+	color:#3A3C7B; 
+	font-weight:bold; 
+	font-size:14px	
+}
+
+.hrZone1
+{
+	color:black; 
+	font-weight:bold; 	
+}
+.hrZone2
+{
+	color:#004000;
+	font-weight:bold; 	
+}
+.hrZone3
+{
+	color:#A89F00;
+	font-weight:bold; 	
+}
+.hrZone4
+{
+	color:#B95C00;
+	font-weight:bold; 	
+}
+.hrZone5
+{
+	color:Maroon;
+	font-weight:bold; 	
+}
+.hrZone6
+{
+	color:#0080C0;
+	font-weight:bold; 	
+}
+
+.MonthlyTitle 
+{
+    font-family: Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+	background-color:#7E9ED3; 
+	color:#000000; 
+	font-weight:bold;
+	vertical-align: bottom;
+}
+.MonthlyTitle2
+{
+    font-family: Arial, Helvetica, sans-serif, "Microsoft YaHei"; 
+	color:#000000; 
+	font-weight:bold;
+	vertical-align: bottom;
+	font-size:14px;
+}
+
+.calDayCell
+{
+    background:url(CalBG.jpg);
+    background-color: Silver;
+    background-position:left;
+    background-repeat:repeat-x;
+    width:14%;
+    text-align: center;
+    color:#000000;
+    border-bottom-width:0px;
+    border-top-width:0px;
+    border-left-width:0px;
+    border-right-color:gray;
+    border-right-width:1px;
+    vertical-align:top;
+}
+
+.calSummary 
+{
+	height:10px;
+	text-align:center;
+	background-color:#f0f0f0;
+	vertical-align:bottom;
+}
+
+A.calWeekLink:visited {text-decoration: none; color: Black;}
+A.calWeekLink:link    {text-decoration: none; color: Black;}
+A.calWeekLink:hover   {text-decoration: none; color: Red;}
+.calWeekDates 
+{
+	writing-mode: tb-rl;
+	filter: flipv fliph;	
+	background-color: Silver;
+    background-position: left;        
+	text-align:center;	
+	border-left-width:1px;
+	border-left-color:black;			
+}
+
+.calWeekHours 
+{	
+	background-color: Silver;
+	text-align:right;	
+	border-left-width:1px;
+	border-left-color:black;
+	vertical-align:bottom;		
+	width:100px; height:30px; 
+	text-align:right;	
+}
+
+.NoBorder 
+{
+	border-top-width:0px;
+	border-bottom-width:0px;
+	border-left-width:0px;
+	border-right-width:1px;
+	border-right-color:Black;
+	border-left-color: Red;
+}

@@ -1,10 +1,43 @@
 require 'bundler/setup'
-require 'csv'
+require 'nokogiri'
 require 'erb'
 require 'byebug'
 
-# This class will read the contexts of the excel file
-# and output xml for power agent using an erb template
+class HtmlParser
+  attr_reader :filename
+
+  def initialize(filename)
+    @filename = filename
+  end
+
+  def doc
+    @doc ||= Nokogiri::HTML(File.read(filename))
+  end
+
+  def html_tables
+    doc.search('//table')
+  end
+
+  def data_table
+    html_tables[5]
+  end
+
+  def html_rows
+    data_table.search('tr')[1..-1]
+  end
+
+  # this returns an array of rows
+  # with each row having an array of cells
+  def data_rows
+    html_rows.each_with_index.map do |row, i|
+      next unless i > 0
+      next if i+1 == html_rows.size
+      row.search('td//text()').map { |cell| CGI.unescapeHTML(cell.to_s.strip) }
+    end.compact
+  end
+end
+
+# This class will take the html rows and output the corresponding erb file
 class PowerAgentConverter
   attr_reader :filename
 
@@ -13,15 +46,18 @@ class PowerAgentConverter
   end
 
   def basename
-    filename.gsub('.csv','')
+    filename.gsub('.html','')
   end
 
-  def csv_rows
-    @workbook ||= CSV.parse(File.read(filename))
+  def data_rows
+    @data_rows ||= HtmlParser.new(filename).data_rows
   end
 
   def rows
-    csv_rows.each_with_index.map {|row, i| Row.new(row) if i > 0 }.compact
+    @rows ||=
+      begin
+        _rows = data_rows.each_with_index.map {|row, i| Row.new(row) if row.size == 25 }.compact # remove any rows that do not have 25 cells
+      end
   end
 
   def erb_template
@@ -37,15 +73,16 @@ class PowerAgentConverter
   end
 
   class Row
-    def initialize(row)
-      @row = row
+    attr_reader :cells
+    def initialize(cells)
+      @cells = cells
     end
 
     # watts
     # 256
     # 120
     def target_power
-      @row[2]
+      @cells[15]
     end
 
     # minutes and seconds
@@ -54,7 +91,7 @@ class PowerAgentConverter
     #  5:00
     #  0:15
     def duration_units
-      @row[1].to_s
+      @cells[3]
     end
 
     def minutes
