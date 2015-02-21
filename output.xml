@@ -634,5 +634,13 @@
         <param name="seconds" value="235"/>
       </duration>
     </segment>
-  
+
+     <segment>
+      <control type="target">
+        <param name="target" value="110"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="235"/>
+      </duration>
+    </segment> 
 </template>
