@@ -1,5 +1,11 @@
-puts "Enter the filename:"
+require_relative 'power_agent_converter.rb'
 
-filname = gets.chomp
+puts "Enter the path to the html file:"
+
+filename = gets.chomp
 
 p = PowerAgentConverter.new(filename)
+
+p.to_file
+
+puts "The file was converted to: #{p.output_filename}"

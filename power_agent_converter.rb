@@ -69,8 +69,12 @@ class PowerAgentConverter
     ERB.new(erb_template).result(binding)
   end
 
+  def output_filename
+    "#{basename}.xml"
+  end
+
   def to_file
-    File.open("#{basename}.xml", "w") { |file| file.puts output }
+    File.open(output_filename, "w") { |file| file.puts output }
   end
 
   class Row

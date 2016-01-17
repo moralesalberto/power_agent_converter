@@ -90,7 +90,6 @@ describe PowerAgentConverter do
 
 
   it 'writes the xml file' do
-    debugger
     expect(converter.to_file).to be_nil
   end
 end
