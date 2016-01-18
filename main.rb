@@ -4,7 +4,15 @@ puts "Enter the path to the html file:"
 
 filename = gets.chomp
 
-p = PowerAgentConverter.new(filename)
+puts "Enter the original ftp:"
+original_ftp = gets.chomp.to_i.to_f
+
+puts "Enter the output ftp:"
+output_ftp = gets.chomp.to_i.to_f
+
+ftp_conversion_factor = output_ftp/original_ftp
+
+p = PowerAgentConverter.new(filename, ftp_conversion_factor)
 
 p.to_file
 

@@ -13,11 +13,11 @@ describe HtmlParser do
   end
 
   it 'should find the html rows' do
-    expect(html_parser.html_rows.size).to eq(73)
+    expect(html_parser.html_rows.size).to eq(74)
   end
 
   it 'should find the data rows' do
-    expect(html_parser.data_rows.size).to eq(71) #remove header and footer
+    expect(html_parser.data_rows.size).to eq(72) #remove header and footer
   end
 
 
@@ -26,41 +26,41 @@ end
 describe PowerAgentConverter do
   let(:filename) { 'input.html' }
 
-  let(:converter) { PowerAgentConverter.new(filename) }
+  let(:converter) { PowerAgentConverter.new(filename, 1.0) }
 
   it 'reads the html file' do
     expect(converter.filename).to eq(filename)
   end
 
   it 'finds the rows' do
-    expect(converter.rows.size).to eq(70)
+    expect(converter.rows.size).to eq(72)
   end
 
   it 'should make sure all rows have the same type of cells' do
-    expect(converter.rows.all? { |row| row.cells.size == 25}).to be_truthy
+    expect(converter.rows.all? { |row| row.cells.size == 25 or row.cells.size == 24 or row.cells.size == 27 }).to be_truthy
   end
 
   context 'one row' do
     let(:row) { converter.rows.last }
 
     it 'can read the duration units' do
-      expect(row.duration_units).to eq('03:55')
+      expect(row.duration_units).to eq('00:04')
     end
 
     it 'reads the minutes' do
-      expect(row.minutes).to eq(3)
+      expect(row.minutes).to eq(0)
     end
 
     it 'reads the seconds' do
-      expect(row.seconds).to eq(55)
+      expect(row.seconds).to eq(4)
     end
 
     it 'calculates duration in seconds' do
-      expect(row.duration).to eq(235)
+      expect(row.duration).to eq(4)
     end
 
     it 'reads the power' do
-      expect(row.target_power).to eq('223')
+      expect(row.target_power).to eq(94)
     end
   end
 
@@ -68,23 +68,23 @@ describe PowerAgentConverter do
     let(:another_row) { converter.rows[9] }
 
     it 'can read the duration units' do
-      expect(another_row.duration_units).to eq('05:23')
+      expect(another_row.duration_units).to eq('00:31')
     end
 
     it 'reads the minutes' do
-      expect(another_row.minutes).to eq(5)
+      expect(another_row.minutes).to eq(0)
     end
 
     it 'reads the seconds' do
-      expect(another_row.seconds).to eq(23)
+      expect(another_row.seconds).to eq(31)
     end
 
     it 'calculates duration in seconds' do
-      expect(another_row.duration).to eq(323)
+      expect(another_row.duration).to eq(31)
     end
 
     it 'reads the power' do
-      expect(another_row.target_power).to eq('212')
+      expect(another_row.target_power).to eq(235)
     end
   end
 

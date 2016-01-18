@@ -7,6 +7,15 @@
   
     <segment>
       <control type="target">
+        <param name="target" value="118"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="328"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
         <param name="target" value="141"/>
       </control>
       <duration type="time">
@@ -632,6 +641,15 @@
       </control>
       <duration type="time">
         <param name="seconds" value="235"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="94"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="4"/>
       </duration>
     </segment>
   

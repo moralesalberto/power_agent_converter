@@ -24,7 +24,7 @@ class HtmlParser
   end
 
   def html_rows
-    data_table.search('tr')[1..-1]
+    data_table.search('tr')
   end
 
   # this returns an array of rows
@@ -40,10 +40,11 @@ end
 
 # This class will take the html rows and output the corresponding erb file
 class PowerAgentConverter
-  attr_reader :filename
+  attr_reader :filename, :ftp_conversion_factor
 
-  def initialize(filename)
+  def initialize(filename, ftp_conversion_factor)
     @filename = filename
+    @ftp_conversion_factor = ftp_conversion_factor
   end
 
   def basename
@@ -57,7 +58,7 @@ class PowerAgentConverter
   def rows
     @rows ||=
       begin
-        _rows = data_rows.each_with_index.map {|row, i| Row.new(row) if row.size == 25 }.compact # remove any rows that do not have 25 cells
+        _rows = data_rows.each_with_index.map {|cells, i| puts "[#{i}, #{cells.size}, #{cells[3]}]"; Row.new(cells, ftp_conversion_factor) }.compact # remove any rows that do not have 25 cells
       end
   end
 
@@ -78,16 +79,31 @@ class PowerAgentConverter
   end
 
   class Row
-    attr_reader :cells
-    def initialize(cells)
+    attr_reader :cells, :ftp_conversion_factor
+    def initialize(cells, ftp_conversion_factor)
       @cells = cells
+      @ftp_conversion_factor = ftp_conversion_factor
+    end
+
+    # seems like the report sometimes has different row sizes
+    def power_cell
+      case @cells.size
+      when 24
+        @cells[14]
+      when 27
+        @cells[17]
+      when 25
+        @cells[15]
+      else
+        raise "error with file; number of cells #{cells.size} unexpected"
+      end
     end
 
     # watts
     # 256
     # 120
     def target_power
-      @cells[15]
+      (power_cell.to_i.to_f * ftp_conversion_factor).to_i
     end
 
     # minutes and seconds
