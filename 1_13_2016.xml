@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<template version="1.0">
+  <name>1_13_2016(251FTP)</name>
+  <description></description>
+  <type>0</type>
+
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="126"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="240"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="226"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="180"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="100"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="60"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="276"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="60"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="100"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="60"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="301"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="60"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="100"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="60"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="326"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="60"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="100"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="120"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="326"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="60"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="238"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="120"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="213"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="240"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="100"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="240"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="326"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="60"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="238"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="120"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="213"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="240"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="100"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="240"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="326"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="60"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="238"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="120"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="213"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="240"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="100"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="240"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="326"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="60"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="238"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="120"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="213"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="240"/>
+      </duration>
+    </segment>
+  
+    <segment>
+      <control type="target">
+        <param name="target" value="126"/>
+      </control>
+      <duration type="time">
+        <param name="seconds" value="300"/>
+      </duration>
+    </segment>
+  
+</template>

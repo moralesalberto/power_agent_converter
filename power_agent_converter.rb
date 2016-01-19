@@ -16,11 +16,11 @@ class HtmlParser
   end
 
   def html_tables
-    doc.search('//table')
+    doc.search('//table[@class="tableSmall"]')
   end
 
   def data_table
-    html_tables[5]
+    html_tables[0]
   end
 
   def html_rows
@@ -90,12 +90,14 @@ class PowerAgentConverter
       case @cells.size
       when 24
         @cells[14]
+      when 26
+        @cells[16]
       when 27
         @cells[17]
       when 25
         @cells[15]
       else
-        raise "error with file; number of cells #{cells.size} unexpected"
+        raise "error with file; number of cells #{cells.size}\n#{cells.inspect} unexpected"
       end
     end
 
@@ -112,7 +114,16 @@ class PowerAgentConverter
     #  5:00
     #  0:15
     def duration_units
-      @cells[3]
+      case @cells.size
+      when 24
+        @cells[2]
+      when 25
+        @cells[3]
+      when 26
+        @cells[2]
+      when 27
+        @cells[2]
+      end
     end
 
     def minutes
